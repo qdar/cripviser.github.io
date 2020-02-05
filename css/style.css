@@ -356,15 +356,6 @@ img {
   color: #fff;
   line-height: 1.2;
 }
-.faq {
-  color: #303030;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
-}
-.faq p {
-  margin-left: 30px;
-}
 .circle span{
   width: 36px;
   height: 36px;
@@ -383,29 +374,27 @@ img {
   right: 30px;
   top: 20px;
 }
-.faq span:after {
+.faq span:after, .faq span:before {
   content: '';
   display: block;
   width: 3px;
   height: 10px;
   border-radius: 10px;
   background: #fff;
-  transform: rotate(45deg);
   position: absolute;
   left: 19px;
   top: 14px;
+  transition-property: transform,-webkit-transform;
+  transition-duration: .2s;
+}
+.faq span:after {
+  transform: rotate(45deg);  
 }
 .faq span:before {
-  content: '';
-  display: block;
-  width: 3px;
-  height: 10px;
-  border-radius: 10px;
-  background: #fff;
   transform: rotate(-45deg);
-  position: absolute;
   left: 13px;
-  top: 14px;
+  transition-property: transform,-webkit-transform;
+  transition-duration: .2s;
 }
 .done span {
   left: 20px;
@@ -482,4 +471,40 @@ textarea {
 }
 .slider {
   margin: 0 100px;
+}
+.faq p {
+  margin: 0;
+  z-index: 10;
+}
+.accordion {
+  color: #303030;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left: 30px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.panel {
+  background: #fff;
+  color: #595959;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-right: 15px;
+  border-radius: 0 0 4px 4px;
+}
+.panel p {
+  padding: 0 30px 25px;
+}
+.box.active {
+  border-radius: 4px 4px 0 0;  
+}
+.faq.active span:before {
+  transform: rotate(-135deg);
+  top: 12px;
+}
+.faq.active span:after {
+  transform: rotate(135deg);
+  top: 12px;
 }

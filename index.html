@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Crypviser</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="slick/slick.css"/>
@@ -365,28 +366,41 @@ solid UX for your employees and partners</p>
 		<section id="contacts" class="contacts">
 			<div class="wrapper">
 				<div class="row">
-					<div class="column_b arguments">
+					<div class="column_b">
 						<h2>Faq</h2>
 						<p>Lorem ipsum, or lipsum as it is sometimes known <br> is a text usedin laying out print, graphic</p>
 						<div class="line green"></div>
-						<div class="box box_big circle faq margin_right">
-							<p>How I Download The App? <span></span></p>
+
+						<button class="accordion box_big box circle faq margin_right but">How I Download The App? <span></span></button>
+						<div class="panel">
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						</div>
-						<div class="box box_big circle faq margin_right">
-							<p>Porcess Of Install The App? <span></span></p>
+						
+						<button class="accordion box_big box circle faq margin_right but">Porcess Of Install The App? <span></span></button>
+						<div class="panel">
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						</div>
-						<div class="box box_big circle faq margin_right">
-							<p>How Can I Update Plan? <span></span></p>
+
+						<button class="accordion box_big box circle faq margin_right but">How Can I Update Plan? <span></span></button>
+						<div class="panel">
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						</div>
-						<div class="box box_big circle faq margin_right">
-							<p>How Update All Features? <span></span></p>
+
+						<button class="accordion box_big box circle faq margin_right but">How Update All Features? <span></span></button>
+						<div class="panel">
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						</div>
-						<div class="box box_big circle faq margin_right">
-							<p>How To Deactive This Features? <span></span></p>
+
+						<button class="accordion box_big box circle faq margin_right but">How To Deactive This Features? <span></span></button>
+						<div class="panel">
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						</div>
-						<div class="box box_big circle faq margin_right">
-							<p>How Can I Change Color Brackground? <span></span></p>
+
+						<button class="accordion box_big box circle faq margin_right but">How Can I Change Color Brackground? <span></span></button>
+						<div class="panel">
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						</div>
+
 					</div>
 					<div class="column_b to_bottom">
 						<h2>Have Other Question? You Can Contact us</h2>
@@ -446,6 +460,22 @@ $(document).ready(function() {
     return false;
   });
 });
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
 $(document).ready(function(){
   $('.slider').slick({
     fade: true,
