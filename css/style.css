@@ -9,12 +9,13 @@ body {
   font-weight: 300;
   margin: 0;
   font-size: 16px;
-  color: #212121; }
+  color: #595959; }
 
 h1, h2, h3, h4 {
   font-weight: 500;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
+  color: #303030;
 }
 h1 {
   font-size: 60px;
@@ -23,13 +24,11 @@ h1 {
 }
 h2 {
   font-size: 48px;
-  color: #303030;
   margin: 0;
 }
 h3 {
-  color: #303030;
   font-size: 24px;
-  margin: 35px 0;
+  margin: 45px 0 0 0;
 }
 header {
   display: -webkit-flex;
@@ -76,7 +75,6 @@ img {
   background-image: url(../img/bg-main-min.jpg);
   background-size: cover;
   color: #fff;
-  height: 100vh;
   padding: 0;
 }
 .menu li, .lang li {
@@ -144,6 +142,10 @@ img {
   -ms-align-items: center;
   align-items: center;
   padding-top: 55px;
+  padding-bottom: 55px;
+}
+.what_about h1 {
+  color: #fff;
 }
 .what_about p {
  font-size: 24px;
@@ -154,9 +156,6 @@ img {
 }
 .what_about .line {
   margin: 0;
-}
-.mockup img {
-  width: 100%;
 }
 .line {
   margin: 45px 0;
@@ -191,26 +190,29 @@ img {
   font-family: 'Oswald', sans-serif;
   letter-spacing: 0.1em;
   border-radius: 4px;
-  background: #ffd67c;
-  background: -moz-linear-gradient(top, #ffd67c 0%, #70b36c 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffd67c), color-stop(100%, #70b36c));
-  background: -webkit-linear-gradient(top, #ffd67c 0%, #70b36c 100%);
-  background: -o-linear-gradient(top, #ffd67c 0%, #70b36c 100%);
-  background: -ms-linear-gradient(top, #ffd67c 0%, #70b36c 100%);
-  background: linear-gradient(to bottom, #ffd67c 0%, #70b36c 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd67c', endColorstr='#70b36c', GradientType=0 );
   -webkit-box-shadow: 0 0 50px rgba(255, 213, 124, 0.35);
   box-shadow: 0 0 50px rgba(255, 213, 124, 0.35);
+  background-image: linear-gradient( to top, #6eb36b, #ffd57a );
   position: relative;
   z-index: 1;
 }
-.big_button a:hover {
-  background: #ffd67c;
-  background: linear-gradient(to bottom, #70b36c 0%, #70b36c 100%);
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient( to top, #6eb36b, #6eb36b );
+  z-index: -1;
+  transition: opacity 0.4s linear;
+  opacity: 0;
+  border-radius: 4px;
 }
+.btn:hover::before {
+  opacity: 1;
+}
+
 .big_button {
   position: relative;
   display: -webkit-flex;
@@ -261,7 +263,7 @@ img {
   align-items: center;
 }
 .box::after {
-  border: 1px solid #ccc;
+  border: 1px solid #e5e5e5;
   content: '';
   width: calc(100% - 10px);
   height: calc(100% - 10px);
