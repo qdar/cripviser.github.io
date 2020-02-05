@@ -365,13 +365,10 @@ img {
 .faq p {
   margin-left: 30px;
 }
-.faq span {
-  content: '';
+.circle span{
   width: 36px;
   height: 36px;
   position: absolute;
-  right: 30px;
-  top: 20px;
   border-radius: 50%;
   background: #70b36c;
   background: -moz-linear-gradient(45deg, #70b36c 0%, #ffd67c 100%);
@@ -381,6 +378,10 @@ img {
   background: -ms-linear-gradient(45deg, #70b36c 0%, #ffd67c 100%);
   background: linear-gradient(45deg, #70b36c 0%, #ffd67c 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70b36c', endColorstr='#ffd67c', GradientType=1 );
+}
+.faq span {
+  right: 30px;
+  top: 20px;
 }
 .faq span:after {
   content: '';
@@ -406,6 +407,37 @@ img {
   left: 13px;
   top: 14px;
 }
+.done span {
+  left: 20px;
+  top: 20px;
+}
+.done span:after {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 16px;
+  border-radius: 10px;
+  background: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 19px;
+  top: 11px;
+}
+.done span:before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 8px;
+  border-radius: 10px;
+  background: #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 12px;
+  top: 17px;
+}
+.done p {
+  margin-left: 80px;
+}
 .to_bottom {
   margin-top: 16px;
 }
@@ -421,16 +453,22 @@ img {
   border: 0;
   cursor: pointer;
 }
-input {
+input, textarea {
   border: 0;
-  padding: 10px;
+  padding: 25px 45px; 
   width: 100%;
-  height: 40px;
+  height: 75px;
   border: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+textarea {
+  height: 180px;
 }
 .success {
   display: none;
+  color: #595959;
+  padding: 35px;
 }
 .gray-box {
   border: 1px solid #e5e5e5;
@@ -440,4 +478,8 @@ input {
 }
 ::placeholder {
   color: rgba(37, 36, 55, 0.5);
+  font-size: 16px;
+}
+.slider {
+  margin: 0 100px;
 }
