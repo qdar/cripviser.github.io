@@ -8,7 +8,7 @@
 </head>
 <body>
 	<main>
-		<section class="home">
+		<section id="home" class="home">
 			<div class="wrapper">
 				<header>
 					<div class="logo">
@@ -16,11 +16,11 @@
 					</div>
 					<nav>
 						<ul class="menu">
-							<li><a href="#" class="active">Home</a></li>
-							<li><a href="#">At a glance</a></li>
-							<li><a href="#">Why cripviser</a></li>
-							<li><a href="#">Features & benefits</a></li>
-							<li><a href="#">Get in touch</a></li>
+							<li><a href="#home" class="scrollto">Home</a></li>
+							<li><a href="#glance" class="scrollto">At a glance</a></li>
+							<li><a href="#why" class="scrollto">Why cripviser</a></li>
+							<li><a href="#features" class="scrollto">Features & benefits</a></li>
+							<li><a href="#contacts" class="scrollto">Get in touch</a></li>
 						</ul>
 						<ul class="lang">
 							<li><a href="#" class="active"><span>Eng</span></a></li>
@@ -83,7 +83,7 @@ communication layer between independent companies.</p>
 				</div>
 			</div>
 		</section>
-		<section class="gray">
+		<section id="glance" class="gray">
 			<div class="wrapper">
 				<h2>At A Glance</h2>
 				<p class="desc">Best Choice For: Finance, Informational Security, Politics, <br> Government, Research and Science, Healthcare, Legal</p>
@@ -145,7 +145,7 @@ solid UX for your employees and partners</p>
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="why">
 			<div class="wrapper">
 				<h2>Why cripviser?</h2>
 				<div class="row">
@@ -204,7 +204,7 @@ solid UX for your employees and partners</p>
 				</div>
 			</div>
 		</section>
-		<section class="features">
+		<section id="features" class="features">
 			<div class="wrapper">
 				<h2>Features & Benefits</h2>
 				<div class="line green"></div>
@@ -358,7 +358,7 @@ solid UX for your employees and partners</p>
 				</div>
 			</div>
 		</section>
-		<section class="contacts">
+		<section id="contacts" class="contacts">
 			<div class="wrapper">
 				<div class="row">
 					<div class="column_b arguments">
@@ -387,8 +387,25 @@ solid UX for your employees and partners</p>
 					<div class="column_b to_bottom">
 						<h2>Have Other Question? You Can Contact us</h2>
 						<div class="line orange"></div>
-						<div class="box_insider contacts_box">
-							ddd
+						<div class="box_insider contacts_box form">
+							<div class="gray-box">
+								<form id="contactform" action="#" method="post" novalidate="novalidate" _lpchecked="1">
+									<input type="text" id="company" name="user_company" placeholder="Enter Your Name*" required="required">
+									<input type="text" id="phone" name="user_phone" placeholder="Enter Your Message*" required="required">
+									<input type="text" id="mail" name="user_mail" placeholder="Enter Your Email*">
+									<div class="button">
+										<button type="submit" class="btn but">Send message <span class="arrow"></span></button>
+									</div>
+								</form>
+							</div>
+							<div class="success" id="contactform-success">
+								<div class="success-massage">
+									<div class="success-inner">
+										<h4>Thanks!</h4>
+										<span>Your application has been sent. <br>Our specialists will contact you <br> as soon as possible.</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -408,5 +425,76 @@ solid UX for your employees and partners</p>
 			</div>
 		</div>
 	</main>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("a.scrollto").click(function() {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: destination
+    }, 800);
+    return false;
+  });
+});
+$(function () {
+  $("#contactform").validate({
+      rules: {
+          user_name: {
+              required: true,
+              normalizer: function (value) {
+                  return $.trim(value);
+              }
+          },
+          user_company: {
+              required: true,
+              normalizer: function (value) {
+                  return $.trim(value);
+              }
+          },
+          user_phone: {
+              required: true,
+              normalizer: function (value) {
+                  return $.trim(value);
+              }
+          },
+          user_mail: {
+              required: true,
+              email: true,
+              normalizer: function (value) {
+                  return $.trim(value);
+              }
+          },
+          user_message: {
+              required: true,
+              normalizer: function (value) {
+                  return $.trim(value);
+              }
+          },
+      },
+      submitHandler: function (form) {
+          $.ajax({
+              type: "POST",
+              url: 'sendmail.php',
+              data: {
+                  user_name: $('#name').val(),
+                  user_company: $('#company').val(),
+                  user_mail: $('#mail').val(),
+                  user_phone: $('#phone').val(),
+                  user_message: $('#msg').val()
+              },
+              success: function (response) {
+                  $('#contactform').hide();
+                  $('#contactform-success').show();
+              },
+              dataType: 'text'
+          })
+      }
+  });
+});
+</script>
 </body>
 </html>
