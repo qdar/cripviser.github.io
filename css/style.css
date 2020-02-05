@@ -204,6 +204,13 @@ img {
   position: relative;
   z-index: 1;
 }
+.big_button a:hover {
+  background: #ffd67c;
+  background: linear-gradient(to bottom, #70b36c 0%, #70b36c 100%);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
 .big_button {
   position: relative;
   display: -webkit-flex;
