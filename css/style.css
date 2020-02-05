@@ -73,6 +73,7 @@ img {
 }
 .home {
   background-image: url(../img/bg-main-min.jpg);
+  background-position: center;
   background-size: cover;
   color: #fff;
   padding: 0;
@@ -306,6 +307,7 @@ img {
 .features {
   background-image: url(../img/bg-features-min.jpg);
   background-size: cover;
+  background-position: center;
 }
 .features h2 {
   color: #fff;
@@ -347,6 +349,7 @@ img {
 .contacts {
   background-image: url(../img/bg-contacts-min.png);
   background-size: cover;
+  background-position: center;
   color: #fff;
 }
 .contacts h2 {
