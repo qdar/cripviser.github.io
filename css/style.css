@@ -265,6 +265,7 @@ input, textarea {
 .boxi {
   min-height: 522px;
   background-repeat: no-repeat;
+  background-position: right;
 }
 .boxi.bg_one {
   background-image: url(../img/inside_01.png);
@@ -511,10 +512,19 @@ input, textarea {
   .column_c:first-child {
     margin-top: 0px;
   }
+  .small.done p {
+    margin-left: 80px;
+    margin-top: 0;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
   .done p {
     margin-left: 20px;
     margin-top: 80px;
     margin-right: 15px;
+  }
+  .small.done {
+    height: 76px;    
   }
   .box_big {
     height: auto;
