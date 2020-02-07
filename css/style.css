@@ -47,7 +47,6 @@ input, textarea {
 }
 ::placeholder {
   color: rgba(37, 36, 55, 0.5);
-  font-size: 16px;
 }
 .wrapper {
   margin: 0 auto;
@@ -426,6 +425,9 @@ input, textarea {
     flex-direction: row;
     align-items: center;    
   }
+  ::placeholder {
+    font-size: 14px;
+  }
   .mobile {
     display: block;
   }
@@ -657,6 +659,9 @@ input, textarea {
   }
   .desc {
     font-size: 14px;
+  }
+  ::placeholder {
+    font-size: 16px;
   }
   .accordion {
     font-size: 14px;
