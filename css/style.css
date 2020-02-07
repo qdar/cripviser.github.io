@@ -240,7 +240,7 @@ input, textarea {
   position: relative;
   margin-bottom: 20px;
 }
-.box::after {
+.box::after, .prices::after {
   border: 1px solid #e5e5e5;
   content: '';
   width: calc(100% - 10px);
@@ -264,7 +264,7 @@ input, textarea {
 .boxi {
   min-height: 522px;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right top;
 }
 .boxi.bg_one {
   background-image: url(../img/inside_01.png);
@@ -274,6 +274,7 @@ input, textarea {
 }
 .prices {
   padding: 45px;
+  position: relative;
 }
 .prices h3 {
   margin-top: 0;
