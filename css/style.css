@@ -356,6 +356,53 @@ input, textarea {
   text-decoration: none;
   cursor: pointer;
 }
+.slick-prev.slick-arrow, .slick-next.slick-arrow {
+  background: #fff!important;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 15px 30px rgba(37, 36, 55, 0.15);
+}
+.slick-prev {
+  left: -65px!important;
+}
+.slick-next {
+  right: -65px!important;
+}
+.slick-next:after, .slick-next:before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 18px;
+  border-radius: 10px;
+  background: #70b36c;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 30px;
+  top: 28px;
+}
+.slick-next:before {
+  transform: rotate(-45deg);
+  left: 30px;
+  top: 16px;
+}
+.slick-prev:after, .slick-prev:before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 18px;
+  border-radius: 10px;
+  background: #70b36c;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 25px;
+  top: 16px;
+}
+.slick-prev:before {
+  transform: rotate(-45deg);
+  left: 25px;
+  top: 28px;
+}
 
 .circle span {
   width: 36px;
