@@ -135,7 +135,6 @@ input, textarea {
 }
 .home {
   background-image: url(../img/bg-main-min.jpg);
-  padding: 0;
 }
 .what_about .btn {
   margin-top: 15px;  
@@ -154,6 +153,9 @@ input, textarea {
 }
 .line.orange::before {
   background: #c6a377;
+}
+.line.white::before {
+  background: #fff;
 }
 .gray {
   background: #fafafa;
@@ -272,12 +274,47 @@ input, textarea {
 .boxi.bg_two {
   background-image: url(../img/inside_02.png);
 }
+.bg_four {
+  background-image: url(../img/inside_04.png);
+  background-position: right top;
+}
+.boxi.four {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+}
+.mt {
+  margin-top: 50px;
+}
 .prices {
-  padding: 45px;
+  padding: 40px;
   position: relative;
+}
+.prices.active {
+  color: #fff;
+  background: #70b36c;
+  background: -moz-linear-gradient(45deg, #70b36c 0%, #ffd67c 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #70b36c), color-stop(100%, #ffd67c));
+  background: -webkit-linear-gradient(45deg, #70b36c 0%, #ffd67c 100%);
+  background: -o-linear-gradient(45deg, #70b36c 0%, #ffd67c 100%);
+  background: -ms-linear-gradient(45deg, #70b36c 0%, #ffd67c 100%);
+  background: linear-gradient(45deg, #70b36c 0%, #ffd67c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70b36c', endColorstr='#ffd67c', GradientType=1 );
 }
 .prices h3 {
   margin-top: 0;
+  font-size: 34px;
+}
+.prices.active h3 {
+  color: #fff;
 }
 .prices .big_button span, .prices .btn {
   width: 100%;
@@ -286,7 +323,41 @@ input, textarea {
 .deployment {
   padding-top: 0;
 }
-.circle span{
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 100px;
+}
+.modal-content {
+  margin: 0 auto;
+  width: 40%;
+  position: relative;
+}
+.close_b {
+  color: #aaa;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  z-index: 99;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close_b:hover,
+.close_b:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.circle span {
   width: 36px;
   height: 36px;
   position: absolute;
@@ -332,7 +403,7 @@ input, textarea {
   transform: rotate(135deg);
   top: 12px;
 }
-.done span {
+.done span, .cross span {
   left: 20px;
   top: 20px;
 }
@@ -354,9 +425,48 @@ input, textarea {
   left: 12px;
   top: 17px;
 }
-.done p {
+.done p, .cross p {
   color: #595959;
   margin-left: 80px;
+}
+.cross span {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  border-radius: 50%;
+  background: #ff2020;
+  background: -moz-linear-gradient(45deg, #ff2020 0%, #ff6969 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #ff2020), color-stop(100%, #ff6969));
+  background: -webkit-linear-gradient(45deg, #ff2020 0%, #ff6969 100%);
+  background: -o-linear-gradient(45deg, #ff2020 0%, #ff6969 100%);
+  background: -ms-linear-gradient(45deg, #ff2020 0%, #ff6969 100%);
+  background: linear-gradient(45deg, #ff2020 0%, #ff6969 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2020', endColorstr='#ff6969', GradientType=1 );
+}
+.cross span:after, .cross span:before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 14px;
+  border-radius: 10px;
+  background: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 16px;
+  top: 11px;
+}
+.cross span:before {
+  transform: rotate(-45deg);
+  left: 16px;
+  top: 11px;
+}
+.small.done.sm p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-left: 70px;
+}
+.column_c.sm {
+  width: 32%;
 }
 .to_bottom {
   -ms-align-items: flex-end;
@@ -403,6 +513,19 @@ input, textarea {
 }
 .copyright {
   padding: 60px 0;
+}
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  transition: all 0.4s;
+  z-index: 999;
+}
+header.sticky {
+  background: #313030;
+  padding: 14px 0;
 }
 @media (min-width: 320px) {
   body {
@@ -458,7 +581,7 @@ input, textarea {
     padding-top: 45px;
   }
   .content_home {
-    padding: 45px 0;
+    padding-top: 45px;
   }
   .what_about p {
     font-size: 16px;
@@ -582,7 +705,7 @@ input, textarea {
     padding-top: 46px;
   }
   .content_home {
-    padding: 55px 0;
+    padding-top: 55px;
   }
 }
 @media (min-width: 1024px) {
@@ -745,7 +868,7 @@ input, textarea {
     height: 44px;
   }
   .logo img {
-      width: 100%;
+    width: 175px;
   }
   section {
     padding: 100px 0;

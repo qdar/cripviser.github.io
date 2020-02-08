@@ -12,34 +12,37 @@
 </head>
 <body>
 	<main>
+		<header class="headr nav-down">
+			<div class="wrapper row">
+				<div class="logo">
+					<img src="img/Logo.png" alt="">
+				</div>
+				<nav class="flex_center">
+					<ul class="menu">
+						<li><a href="#home" class="scrollto">Home</a></li>
+						<li><a href="#glance" class="scrollto">At a glance</a></li>
+						<li><a href="#why" class="scrollto">Why cripviser</a></li>
+						<li><a href="#features" class="scrollto">Features & benefits</a></li>
+						<li><a href="#contacts" class="scrollto">Get in touch</a></li>
+					</ul>
+					<ul class="lang">
+						<li><a href="#" class="active"><span>En</span></a></li>
+						<li><a href="#"><span>Es</span></a></li>
+						<li><a href="#"><span>De</span></a></li>
+						<li><a href="#"><span>Ru</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 		<section id="home" class="cover_bg home">
 			<div class="wrapper">
-				<header class="row">
-					<div class="logo">
-						<img src="img/Logo.png" alt="">
-					</div>
-					<nav class="flex_center">
-						<ul class="menu">
-							<li><a href="#home" class="scrollto">Home</a></li>
-							<li><a href="#glance" class="scrollto">At a glance</a></li>
-							<li><a href="#why" class="scrollto">Why cripviser</a></li>
-							<li><a href="#features" class="scrollto">Features & benefits</a></li>
-							<li><a href="#contacts" class="scrollto">Get in touch</a></li>
-						</ul>
-						<ul class="lang">
-							<li><a href="#" class="active"><span>Eng</span></a></li>
-							<li><a href="#"><span>De</span></a></li>
-							<li><a href="#"><span>Ru</span></a></li>
-						</ul>
-					</nav>
-				</header>
 				<div class="flex_center content_home">
 					<div class="what_about">
 						<h1>Crypviser Enterprise Integrator</h1>
 						<p>A white label secure communication <br> solution for Enterprises</p>
 						<div class="line green"></div>
 						<div class="big_button">
-							<a href="#" class="btn">Read more</a>
+							<a href="#next" class="btn scrollto">Learn more</a>
 							<span></span>
 						</div>
 					</div>
@@ -49,7 +52,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="grid">
+		<section id="next" class="grid" >
 			<div class="wrapper">
 				<div class="row">
 					<div class="column_c">
@@ -142,23 +145,23 @@
 							<p class="desc">Crypviser Enterprise Integrator brings a complete new approach to security and data protection, based on decentralized architecture, to address flaws in existing communication solutions</p>
 							<div class="line green"></div>
 						</div>
-						<div class="box box_big circle done">
+						<div class="box box_big circle cross">
 							<span></span>
 							<p>Outdated Approach For Security Implementation (E.G. Old Diffie-Hellman Key Exchange Algorithm And Outdated Ciphers)</p>
 						</div>
-						<div class="box box_big circle done">
+						<div class="box box_big circle cross">
 							<span></span>
 							<p>Weak Protection Against Man-Inthe Middle Attacks</p>
 						</div>
-						<div class="box box_big circle done">
+						<div class="box box_big circle cross">
 							<span></span>
 							<p>Local Device Data Stored In Unencrypted Format</p>
 						</div>
-						<div class="box box_big circle done">
+						<div class="box box_big circle cross">
 							<span></span>
 							<p>Public Keys Are Managed By A Trusted Centralized Certificate Authority</p>
 						</div>
-						<div class="box box_big circle done">
+						<div class="box box_big circle cross">
 							<span></span>
 							<p>Administration And Access Control Are Managed By A Single Administration Authority</p>
 						</div>
@@ -181,13 +184,17 @@
 						<p>Key storage, system administration and access management is in the hands of a community of independent stakeholders operating in immutable distributed environment governed by the consensus. Each connected user device holds a lightweight node that is always in sync with the network, used for keys verification purposes. End-to-end encryption is implemented, all locally stored data is also encrypted.</p>
 						<div class="line orange"></div>
 						<div class="row">
-							<div class="column_b box box_big circle done small">
+							<div class="column_c box box_big circle done small sm">
 								<span></span>
 								<p>Smart Administration</p>
 							</div>
-							<div class="column_b box box_big circle done small">
+							<div class="column_c box box_big circle done small sm">
 								<span></span>
 								<p>Advanced Cryptography</p>
+							</div>
+							<div class="column_c box box_big circle done small sm">
+								<span></span>
+								<p>BOYD Managment</p>
 							</div>
 						</div>
 					</div>
@@ -288,6 +295,20 @@
 						<p>Crypviser Enterprise Integrator implements the latest approach towards cryptography like synchronous stream ciphers (e.g. Salsa20/20) and truly professional approach to encryption algorithms (e.g. usage of independent keys entropy sources). Implementation of post- quantum cryptography makes yourdata as private as it can ever be</p>
 					</div>
 				</div>
+				<div class="row">
+					<div class="column_b boxi bg_one mt">
+						<div class="box box_icon">
+							<img src="img/icon_12.png" alt="icon_01">
+						</div>
+						<h3>BYOD Management</h3>
+						<p>By applying corporate MDM policy administrators can restrict installation and access of any software rather than secure enterprise communication app on employee device which can be used at work place. Thus approach to BYOD practice will allow to avoid crucial security concerns, such:</p>
+					</div>
+					<div class="column_b boxi bg_four four mt">
+						<p><b>Local exposure</b> – Loss of control and visibility of the enterprise data which is being transmitted, stored, and processed on a personal device. One of the inherent downsides to BYOD.</p>
+						<p><b>Data leakage</b> – Potential data leakage or disclosure of enterprise data from an unsecured device</p>
+						<p><b>Data loss</b> – Physical loss or theft of a device (and thereby loss or compromise of sensitive data)</p>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="deployment">
@@ -297,37 +318,40 @@
 				<div class="row">
 					<div class="column_c prices">
 						<h3>Cloud</h3>
+						<div class="line orange"></div>
 						<p><b>Private blockchain:</b><br>Crypviser Decentralized</p>
 						<p><b>Transport Layer hosting:</b><br>Local infrastructure</p>
 						<p><b>Cost:</b><br>High</p>
 						<p><b>Protection Level:</b><br>Paranoid</p>
 						<p><b>Price Model:</b><br>Setup fee + Pay per user</p>
 						<div class="big_button">
-							<a href="#" class="btn">Read more</a>
+							<button id="myBtn" class="btn but">Order now</button>
 							<span></span>
 						</div>
 					</div>
-					<div class="column_c prices">
+					<div class="column_c prices active bg_four">
 						<h3>Private cloud</h3>
+						<div class="line white"></div>
 						<p><b>Private blockchain:</b><br>Crypviser Decentralized</p>
 						<p><b>Transport Layer hosting:</b><br>Local infrastructure</p>
 						<p><b>Cost:</b><br>High</p>
 						<p><b>Protection Level:</b><br>Paranoid</p>
 						<p><b>Price Model:</b><br>Setup fee + Pay per user</p>
 						<div class="big_button">
-							<a href="#" class="btn">Read more</a>
+							<button id="myBtn_a" class="btn but">Order now</button>
 							<span></span>
 						</div>
 					</div>
 					<div class="column_c prices">
 						<h3>On premise cloud</h3>
+						<div class="line orange"></div>
 						<p><b>Private blockchain:</b><br>Crypviser Decentralized</p>
 						<p><b>Transport Layer hosting:</b><br>Local infrastructure</p>
 						<p><b>Cost:</b><br>High</p>
 						<p><b>Protection Level:</b><br>Paranoid</p>
 						<p><b>Price Model:</b><br>Setup fee + Pay per user</p>
 						<div class="big_button">
-							<a href="#" class="btn">Read more</a>
+							<button id="myBtn_b" class="btn but">Order now</button>
 							<span></span>
 						</div>
 					</div>
@@ -425,6 +449,45 @@
 			</div>
 		</div>
 	</main>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+  </div>
+</div>
+
+<div id="myModal_a" class="modal">
+  <div class="modal-content">
+    <span class="close_a">&times;</span>
+  </div>
+</div>
+
+<div id="myModal_b" class="modal">
+  <div class="modal-content">
+    <span class="close_b">&times;</span>
+		<div class="box form">
+			<div class="gray-box">
+				<form id="contactform" action="#" method="post" novalidate="novalidate" _lpchecked="1">
+					<input type="text" id="company" name="user_company" placeholder="Enter Your Name*" required="required">
+					<input type="text" id="mail" name="user_mail" placeholder="Enter Your Email*">
+					<textarea name="user_message" id="msg" cols="30" rows="10" placeholder="Enter Your Message*"></textarea>
+					<div class="big_button">
+						<button type="submit" class="btn but">Send message</button>
+						<span></span>
+					</div>
+				</form>
+				<div class="success" id="contactform-success">
+					<div class="success-massage">
+						<div class="success-inner">
+							<h4>Thanks!</h4>
+							<span>Your application has been sent. <br>Our specialists will contact you <br> as soon as possible.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</div>
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
