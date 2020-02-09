@@ -565,7 +565,6 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  padding: 20px;
   background: transparent;
   transition: all 0.4s;
   z-index: 999;
@@ -574,6 +573,7 @@ header.sticky {
   background: #303030;
   padding: 14px 0;
 }
+
 @media (min-width: 320px) {
   body {
     font-size: 14px;
@@ -639,6 +639,23 @@ header.sticky {
     height: 30px;
     font-size: 11px;
   }
+  .headr {
+    display: none;
+  }
+  .mobile_menu {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .mobile_menu .row {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+  }
   .wrapper {
     width: 100%;
     padding: 0 8%;
@@ -650,10 +667,7 @@ header.sticky {
     -o-flex-direction: column;
     flex-direction: column;
   }
-  .column_b {
-    width: 100%;
-  }
-  .column_c {
+  .column_b, .column_c {
     width: 100%;
   }
   .menu {
@@ -674,7 +688,7 @@ header.sticky {
     font-size: 18px;
   }
   section {
-    padding: 75px 0;
+    padding: 65px 0;
   }
   .gray-box {
     padding: 30px 15px;
@@ -686,7 +700,7 @@ header.sticky {
     margin-top: 0px;
   }
   .small.done p {
-    margin-left: 80px;
+    margin-left: 70px;
     margin-top: 0;
     margin-right: 15px;
     margin-bottom: 0;
@@ -701,6 +715,17 @@ header.sticky {
   }
   .box_big {
     height: auto;
+  }
+  .column_c.sm {
+    width: 100%;
+  }
+  .small.done.sm p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 75px;
+  }
+  section#another .column_c {
+    margin-top: 0;
   }
   .boxi {
     padding: 35px;
@@ -738,6 +763,22 @@ header.sticky {
   }
   .to_bottom .column_b:last-child {
     margin-top: 50px;
+  }
+  .slick-prev.slick-arrow, .slick-next.slick-arrow {
+    display: none!important;
+  }
+  .done p, .cross p {
+    margin-left: 70px;
+    margin-right: 15px;
+  }
+  .boxi.four {
+    margin-top: -30px;
+  }
+  .mt {
+    margin-top: 0;
+  }
+  .modal-content {
+    width: 80%;
   }
 }
 @media (min-width: 768px) {
