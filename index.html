@@ -12,18 +12,18 @@
 </head>
 <body>
 	<main>
-		<header class="headr nav-down">
+		<header class="headr">
 			<div class="wrapper row">
 				<div class="logo">
 					<img src="img/Logo.png" alt="">
 				</div>
 				<nav class="flex_center">
 					<ul class="menu">
-						<li><a href="#home" class="scrollto">Home</a></li>
-						<li><a href="#glance" class="scrollto">At a glance</a></li>
-						<li><a href="#why" class="scrollto">Why cripviser</a></li>
-						<li><a href="#features" class="scrollto">Features & benefits</a></li>
-						<li><a href="#contacts" class="scrollto">Get in touch</a></li>
+						<li class="current"><a href="#home" class="smoothscroll">Home</a></li>
+						<li><a href="#glance" class="smoothscroll">At a glance</a></li>
+						<li><a href="#whycrip" class="smoothscroll">Why cripviser</a></li>
+						<li><a href="#features" class="smoothscroll">Features & benefits</a></li>
+						<li><a href="#contacts" class="smoothscroll">Get in touch</a></li>
 					</ul>
 					<ul class="lang">
 						<li><a href="#" class="active"><span>En</span></a></li>
@@ -42,7 +42,7 @@
 						<p>A white label secure communication <br> solution for Enterprises</p>
 						<div class="line green"></div>
 						<div class="big_button">
-							<a href="#next" class="btn scrollto">Learn more</a>
+							<a href="#next" class="btn smoothscroll">Learn more</a>
 							<span></span>
 						</div>
 					</div>
@@ -132,7 +132,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="why">
+		<section id="whycrip">
 			<div class="wrapper">
 				<h2>Why cripviser?</h2>
 				<div class="mobile">
@@ -172,7 +172,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="gray order_sol">
+		<section id="another" class="gray order_sol">
 			<div class="wrapper">
 				<div class="row">
 					<div class="image_big">
@@ -277,7 +277,7 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="another_w">
 			<div class="wrapper">
 				<div class="row">
 					<div class="column_b boxi bg_one">
@@ -311,7 +311,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="deployment">
+		<section id="another_q" class="deployment">
 			<div class="wrapper">
 				<h2>Deployment Options</h2>
 				<div class="line orange"></div>
@@ -358,7 +358,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="gray">
+		<section id="another_t" class="gray">
 			<div class="wrapper">
 				<h2>App Screenshort</h2>
 				<p class="desc">Lorem ipsum, or lipsum as it is sometimes known <br> is a text usedin laying out print, graphic</p>
@@ -494,9 +494,11 @@
   </div>
 </div>
 
-<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="slick/slick.min.js"></script>
+<script src="js/waypoints.js"></script>
 <script src="js/common.js"></script>
+
 </body>
 </html>

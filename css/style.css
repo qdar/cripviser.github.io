@@ -105,7 +105,7 @@ input, textarea {
   margin-right: 10px;
   margin-left: 10px;
 }
-.menu a:hover, .menu a.active {
+.menu a:hover, .menu li.active a {
   color: #fff;
   border-bottom: 2px solid #6fb36c;
 }
@@ -571,7 +571,7 @@ header {
   z-index: 999;
 }
 header.sticky {
-  background: #313030;
+  background: #303030;
   padding: 14px 0;
 }
 @media (min-width: 320px) {
