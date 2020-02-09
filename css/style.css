@@ -291,9 +291,6 @@ input, textarea {
   flex-direction: column;
   justify-content: center;
 }
-.mt {
-  margin-top: 50px;
-}
 .prices {
   padding: 40px;
   position: relative;
@@ -345,7 +342,6 @@ input, textarea {
   color: #aaa;
   position: absolute;
   right: 20px;
-  top: 5px;
   z-index: 99;
   font-size: 28px;
   font-weight: bold;
@@ -507,14 +503,6 @@ input, textarea {
   left: 16px;
   top: 11px;
 }
-.small.done.sm p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-left: 70px;
-}
-.column_c.sm {
-  width: 32%;
-}
 .to_bottom {
   -ms-align-items: flex-end;
   align-items: flex-end;
@@ -529,7 +517,6 @@ input, textarea {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  padding-left: 30px;
   margin: 0;
   margin-top: 18px;
 }
@@ -639,17 +626,7 @@ header.sticky {
     height: 30px;
     font-size: 11px;
   }
-  .headr {
-    display: none;
-  }
-  .mobile_menu {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-  }
-  .mobile_menu .row {
+  .headr .row {
     -webkit-flex-direction: row;
     -moz-flex-direction: row;
     -ms-flex-direction: row;
@@ -692,6 +669,9 @@ header.sticky {
   }
   .gray-box {
     padding: 30px 15px;
+  }
+  .modal .gray-box {
+    padding: 45px 15px;
   }
   .column_c {
     margin-top: 70px;
@@ -779,6 +759,25 @@ header.sticky {
   }
   .modal-content {
     width: 80%;
+  }
+  .close_b {
+    top: 2px;
+  }
+  .slick-dots {
+    bottom: -45px!important;
+    display: block!important;
+  }
+  .slick-dots li.slick-active button {
+    background: #70b36c!important;
+  }
+  .slick-dots li button {
+    background: #ffd67c!important;
+    border-radius: 50%;
+    width: 14px!important;
+    height: 14px!important;
+  }
+  .accordion {
+    padding-left: 25px;
   }
 }
 @media (min-width: 768px) {
@@ -947,6 +946,7 @@ header.sticky {
   }
   .accordion {
     font-size: 16px;
+    padding-left: 30px;
   }
   .image_big img {
     width: 100%;
@@ -994,5 +994,31 @@ header.sticky {
   }
   textarea {
     height: 180px;
+  }
+  .slick-prev.slick-arrow, .slick-next.slick-arrow {
+    display: block!important;
+  }
+  .slick-dots {
+    display: none!important;
+  }
+  .column_c.sm {
+    width: 32%;
+  }
+  .small.done.sm p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-left: 70px;
+  }
+  .mt, .boxi.four {
+    margin-top: 50px;
+  }
+  .close_b {
+    top: 5px;
+  }
+  .modal-content {
+    width: 40%;
+  }
+  .modal .gray-box {
+    padding: 45px 75px;
   }
 }

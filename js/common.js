@@ -55,6 +55,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     draggable: true,
     arrows: true,
+    dots: true,
   });
 });
 $(function () {
