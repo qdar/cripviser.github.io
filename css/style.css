@@ -671,7 +671,7 @@ header.sticky {
     padding: 30px 15px;
   }
   .modal .gray-box {
-    padding: 45px 15px;
+    padding: 45px 30px;
   }
   .column_c {
     margin-top: 70px;
@@ -758,7 +758,7 @@ header.sticky {
     margin-top: 0;
   }
   .modal-content {
-    width: 80%;
+    width: 90%;
   }
   .close_b {
     top: 2px;
