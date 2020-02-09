@@ -50,12 +50,25 @@ for (i = 0; i < acc.length; i++) {
 }
 
 $(document).ready(function(){
+  $(".mainmenu").on('click',function(){
+    $(this).find(".hamberger").toggleClass("open");
+  });
+})
+$('.add_panel').click(function(){
+  $("body").toggleClass("open_panel");
+});
+$('.add_lang').click(function(){
+  $("body").toggleClass("open_lang");
+});
+
+$(document).ready(function(){
   $('.slider').slick({
     fade: true,
     slidesToShow: 1,
     draggable: true,
     arrows: true,
     dots: true,
+    speed: 1000,
   });
 });
 $(function () {
