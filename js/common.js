@@ -127,50 +127,71 @@ $(function () {
   });
 });
 
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
+$(function () {
+  $("#contactform_a").validate({
+    rules: {
+      user_name: {
+          required: true,
+          normalizer: function (value) {
+              return $.trim(value);
+          }
+      },
+      user_company: {
+          required: true,
+          normalizer: function (value) {
+              return $.trim(value);
+          }
+      },
+      user_phone: {
+          required: true,
+          normalizer: function (value) {
+              return $.trim(value);
+          }
+      },
+      user_mail: {
+          required: true,
+          email: true,
+          normalizer: function (value) {
+              return $.trim(value);
+          }
+      },
+      user_message: {
+          required: true,
+          normalizer: function (value) {
+              return $.trim(value);
+          }
+      },
+    },
+    submitHandler: function (form) {
+      $.ajax({
+          type: "POST",
+          url: 'sendmail.php',
+          data: {
+              user_name: $('#name').val(),
+              user_company: $('#company').val(),
+              user_mail: $('#mail').val(),
+              user_phone: $('#phone').val(),
+              user_message: $('#msg').val()
+          },
+          success: function (response) {
+              $('#contactform_a').hide();
+              $('#contactform-success').show();
+          },
+          dataType: 'text'
+      })
+    }
+  });
+});
 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-var modal = document.getElementById("myModal_a");
-var btn = document.getElementById("myBtn_a");
-var span = document.getElementsByClassName("close_a")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-var modal = document.getElementById("myModal_b");
-var btn = document.getElementById("myBtn_b");
-var span = document.getElementsByClassName("close_b")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+$(function () {
+  $('.popup-modal').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    focus: '#username',
+    modal: true
+  });
+  $(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+});

@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="slick/slick.css"/>
 	<link rel="stylesheet" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700|Oswald:500,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
@@ -15,16 +16,15 @@
 		<header class="headr">
 			<div class="wrapper row">
 				<div class="logo">
-					<img src="img/Logo.png" alt="">
+					<img src="img/logo.png" alt="">
 				</div>
 				<nav class="flex_center">
 					<ul class="menu">
 						<li class="current"><a href="#home" class="smoothscroll">Home</a></li>
 						<li><a href="#glance" class="smoothscroll">At a glance</a></li>
 						<li><a href="#whycrip" class="smoothscroll">Why cripviser</a></li>
-						<li><a href="#solution" class="smoothscroll">The solution</a></li>
 						<li class="hide_li">
-							<a href="#contacts" class="smoothscroll">Get in touch</a>
+							<a href="#solution" class="smoothscroll">The solution</a>
 							<ul class="hide_menu">
 								<li><a href="#features" class="smoothscroll">Features & Benefits</a></li>
 								<li><a href="#deployment" class="smoothscroll">Deployment options</a></li>
@@ -32,6 +32,7 @@
 								<li><a href="#testimonies" class="smoothscroll">Testimonies</a></li>
 							</ul>
 						</li>
+						<li><a href="#contacts" class="smoothscroll">Get in touch</a></li>
 					</ul>
 					<ul class="lang add_lang">
 						<li class="active"><a><span>En</span></a></li>
@@ -293,7 +294,7 @@
 						<p>Сrypviser Enterprise Integrator implements a completely different approach: Security model is built around natural use of asymmetric cryptography with decentralized storage and exchange of public keys. Users hold private keys associated with their account, and public key management is implemented via decentralized network of peer nodes.</p>
 						<p>Key storage, system administration and access management is in the hands of a community of independent stakeholders operating in immutable distributed environment governed by the consensus. Each connected user device holds a lightweight node that is always in sync with the network, used for keys verification purposes. End-to-end encryption is implemented, all locally stored data is also encrypted.</p>
 						<div class="line orange"></div>
-						<div class="row">
+						<div class="row for_pl">
 							<div class="column_c box box_big circle done small sm">
 								<span></span>
 								<p>Smart Administration</p>
@@ -359,7 +360,7 @@
 						<p><b>Protection Level:</b><br>Paranoid</p>
 						<p><b>Price Model:</b><br>Setup fee + Pay per user</p>
 						<div class="big_button">
-							<button id="myBtn" class="btn but">Order now</button>
+							<a href="#test-modal" class="popup-modal btn but">Order now</a>
 							<span></span>
 						</div>
 					</div>
@@ -372,7 +373,7 @@
 						<p><b>Protection Level:</b><br>Paranoid</p>
 						<p><b>Price Model:</b><br>Setup fee + Pay per user</p>
 						<div class="big_button">
-							<button id="myBtn_a" class="btn but">Order now</button>
+							<a href="#test-modal" class="popup-modal btn but">Order now</a>
 							<span></span>
 						</div>
 					</div>
@@ -385,7 +386,7 @@
 						<p><b>Protection Level:</b><br>Paranoid</p>
 						<p><b>Price Model:</b><br>Setup fee + Pay per user</p>
 						<div class="big_button">
-							<button id="myBtn_b" class="btn but">Order now</button>
+							<a href="#test-modal" class="popup-modal btn but">Order now</a>
 							<span></span>
 						</div>
 					</div>
@@ -489,50 +490,37 @@
 		</div>
 	</main>
 
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-  </div>
-</div>
 
-<div id="myModal_a" class="modal">
-  <div class="modal-content">
-    <span class="close_a">&times;</span>
-  </div>
-</div>
-
-<div id="myModal_b" class="modal">
-  <div class="modal-content">
-    <span class="close_b">&times;</span>
-		<div class="box form">
-			<div class="gray-box">
-				<form id="contactform" action="#" method="post" novalidate="novalidate" _lpchecked="1">
-					<input type="text" id="company" name="user_company" placeholder="Enter Your Name*" required="required">
-					<input type="text" id="mail" name="user_mail" placeholder="Enter Your Email*">
-					<textarea name="user_message" id="msg" cols="30" rows="10" placeholder="Enter Your Message*"></textarea>
-					<div class="big_button">
-						<button type="submit" class="btn but">Send message</button>
-						<span></span>
-					</div>
-				</form>
-				<div class="success" id="contactform-success">
-					<div class="success-massage">
-						<div class="success-inner">
-							<h4>Thanks!</h4>
-							<span>Your application has been sent. <br>Our specialists will contact you <br> as soon as possible.</span>
-						</div>
+<div id="test-modal" class="white-popup-block mfp-hide">
+	<div class="box form">
+		<div class="gray-box">
+			<form id="contactform_a" action="#" method="post" novalidate="novalidate" _lpchecked="1">
+				<input type="text" id="company" name="user_company" placeholder="Enter Your Name*" required="required">
+				<input type="text" id="mail" name="user_mail" placeholder="Enter Your Email*">
+				<textarea name="user_message" id="msg" cols="30" rows="10" placeholder="Enter Your Message*"></textarea>
+				<div class="big_button">
+					<button type="submit" class="btn but">Send message</button>
+					<span></span>
+				</div>
+			</form>
+			<div class="success" id="contactform-success">
+				<div class="success-massage">
+					<div class="success-inner">
+						<h4>Thanks!</h4>
+						<span>Your application has been sent. <br>Our specialists will contact you <br> as soon as possible.</span>
 					</div>
 				</div>
 			</div>
 		</div>
-  </div>
+	</div>
+	<p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
 </div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="slick/slick.min.js"></script>
 <script src="js/waypoints.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/common.js"></script>
-
 </body>
 </html>
